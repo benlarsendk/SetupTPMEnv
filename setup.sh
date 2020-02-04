@@ -31,5 +31,4 @@ make -f utils/makefiletpmc
 make install
 
 # Add library
-echo '/opt/ibmtss/utils/' > /etc/ld.so.conf.d/tss.conf
 ldconfig
