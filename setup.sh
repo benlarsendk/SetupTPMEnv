@@ -26,5 +26,5 @@ cd /opt/ibmtss
 autoreconf -i
 ./configure --prefix=${HOME}/local --disable-hwtpm
 make clean
-cd utils
-make -f makefiletpmc
+make -f utils/makefiletpmc
+make install
