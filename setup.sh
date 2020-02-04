@@ -26,7 +26,7 @@ make
 # Build IBM TSS & Install
 cd /opt/ibmtss
 autoreconf -i
-./configure --prefix=${HOME}/local --disable-hwtpm --disable-tpm-1.2
+./configure --prefix=/usr/local --disable-hwtpm --disable-tpm-1.2
 make clean
 make 
 make install
