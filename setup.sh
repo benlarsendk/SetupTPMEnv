@@ -4,9 +4,10 @@
 # Install requirements for IBM
 apt install libssl-dev build-essential autoconf libtool pkg-config -y
 # Install requirements for dev
-apt install cmake gdb libgmp3-dev -y
+apt install cmake gdb libgmp3-dev emacs -y
 
-
+# Hacks
+chmod 777 /opt/
 
 # Download IBM Software TPM and TSS
 cd /tmp/
@@ -25,9 +26,9 @@ make
 # Build IBM TSS & Install
 cd /opt/ibmtss
 autoreconf -i
-./configure --prefix=${HOME}/local --disable-hwtpm
+./configure --prefix=${HOME}/local --disable-hwtpm --disable-tpm-1.2
 make clean
-make -f utils/makefiletpmc
+make 
 make install
 
 # Add library
