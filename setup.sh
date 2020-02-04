@@ -4,7 +4,7 @@
 # Install requirements for IBM
 apt install libssl-dev build-essential autoconf libtool pkg-config -y
 # Install requirements for dev
-apt install cmake
+apt install cmake gdb -y
 
 
 
