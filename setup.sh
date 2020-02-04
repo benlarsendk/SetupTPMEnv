@@ -22,6 +22,7 @@ mkdir /opt/ibmtss && tar -xzf ibmtss.tar.gz -C /opt/ibmtss
 cd /opt/ibmtpm/src
 make
 
+# Build IBM TSS & Install
 cd /opt/ibmtss
 autoreconf -i
 ./configure --prefix=${HOME}/local --disable-hwtpm
