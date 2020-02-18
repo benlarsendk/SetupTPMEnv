@@ -18,6 +18,9 @@ wget -O ibmtss.tar.gz https://sourceforge.net/projects/ibmtpm20tss/files/latest/
 mkdir /opt/ibmtpm && tar -xzf ibmtpm.tar.gz -C /opt/ibmtpm
 mkdir /opt/ibmtss && tar -xzf ibmtss.tar.gz -C /opt/ibmtss
 
+# Patch for Ubuntu
+sed -i 's/certifyx509_LDADD = libibmtssutils.la libibmtss.la/certifyx509_LDADD = libibmtssutils.la libibmtss.la $(LIBCRYPTO_LIBS)/g' /opt/utils/Makefile.am
+
 
 # Build IBM TPM
 cd /opt/ibmtpm/src
