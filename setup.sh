@@ -19,7 +19,7 @@ mkdir /opt/ibmtpm && tar -xzf ibmtpm.tar.gz -C /opt/ibmtpm
 mkdir /opt/ibmtss && tar -xzf ibmtss.tar.gz -C /opt/ibmtss
 
 # Patch for Ubuntu
-sed -i 's/certifyx509_LDADD = libibmtssutils.la libibmtss.la/certifyx509_LDADD = libibmtssutils.la libibmtss.la $(LIBCRYPTO_LIBS)/g' /opt/utils/Makefile.am
+sed -i 's/certifyx509_LDADD = libibmtssutils.la libibmtss.la/certifyx509_LDADD = libibmtssutils.la libibmtss.la $(LIBCRYPTO_LIBS)/g' /opt/ibmtss/utils/Makefile.am
 
 
 # Build IBM TPM
