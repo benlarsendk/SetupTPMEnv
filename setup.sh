@@ -6,7 +6,7 @@ apt install libssl-dev build-essential autoconf libtool pkg-config -y
 # Install requirements for dev
 apt install cmake gdb libgmp3-dev emacs -y
 
-# Hacks
+# Hacks, don't do this. Seriously. :D 
 chmod 777 /opt/
 
 # Download IBM Software TPM and TSS
